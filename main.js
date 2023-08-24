@@ -1,14 +1,16 @@
-function calcular(){
+let form = document.querySelector("form")
+  form.addEventListener("submit", (event) => {
+    event.preventDefault()
+  })
+let button = document.getElementById("calcular")
+button.addEventListener("click",() => {
   //Coleto os valores declarados nos inputs e transformo em float
   let axValue = parseFloat(document.getElementById("axValue").value)
   let bxValue = parseFloat(document.getElementById("bxValue").value)
   let cValue = parseFloat(document.getElementById("cValue").value)
 
   //Ao submeter o formulário, o site não irá atualizar
-  let form = document.querySelector("form")
-  form.addEventListener("submit", (event) => {
-    event.preventDefault()
-  })
+  
   //result recebe o elemento html para mostrar o resultado
   let result = document.getElementById("result")
   let equacao = document.getElementById("equacao")
@@ -47,5 +49,4 @@ function calcular(){
                           Vértice Xv: ${verticeX}<br>
                           Vértice Yv: ${verticeY}`
   }
-
-}
+})
